@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router";
+import { Navigate } from "react-router";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [show, handleShow] = useState(false);
-  const history = useHistory();
-  const transtiionNavBar = () => {
+  const history = Navigate();
+  const transtionNavBar = () => {
     if (window.scrollY > 100) {
       handleShow(true);
     } else {
@@ -13,7 +13,7 @@ const Navbar = () => {
     }
   };
   useEffect(() => {
-    window.addEventListener("scroll", transtiionNavBar);
+    window.addEventListener("scroll", transtionNavBar);
     // return window.removeEventListener("scroll", transtiionNavBar);
   }, []);
 

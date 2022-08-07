@@ -1,5 +1,5 @@
 import HomeScreen from "./Screens/HomeScreen";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import LoginScreen from "./Screens/LoginScreen";
 import { useEffect } from "react";
@@ -32,14 +32,14 @@ function App() {
         {!user ? (
           <LoginScreen />
         ) : (
-          <Switch>
+          <Routes>
             <Route path="/profile">
               <ProfileScreen />
             </Route>
             <Route exact path="/">
               <HomeScreen />
             </Route>
-          </Switch>
+          </Routes>
         )}
       </HashRouter>
     </div>
