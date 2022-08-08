@@ -1,4 +1,4 @@
-website: netflix-clone-daf75.web.app
+website: http://netflix-clone-daf75.web.app
 
 # Getting Started with Create React App
 
